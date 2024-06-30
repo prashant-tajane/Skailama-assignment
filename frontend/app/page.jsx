@@ -8,14 +8,13 @@ import Button from "../components/Button";
 import { IoAddCircle } from "react-icons/io5";
 import CreateProjectModal from "../components/Modals/CreateProjectModal";
 import { useEffect, useState } from "react";
-import UsersModals from "../components/Modals/UsersModals";
 import useProjects from "../hooks/useProjects";
 import { usePathname } from "next/navigation";
 import moment from "moment"
 
 export default function Home() {
   const [createProject, setCreateProject] = useState(false);
-  const [userModal, setUserModal] = useState(false);
+  
   const { projects, setProjects } = useProjects();
   const pathname = usePathname();
   let user 
@@ -24,14 +23,6 @@ export default function Home() {
     user = JSON.parse(window.localStorage.getItem("lamaUser"));
   }
 
-  useEffect(() => {
-    // Check if the user has seen the modal before
-    const hasSeenModal = sessionStorage.getItem("hasSeenUserModal");
-    if (!hasSeenModal || user === null) {
-      setUserModal(true);
-      sessionStorage.setItem("hasSeenUserModal", "true");
-    }
-  }, []);
 
   useEffect(() => {
     if (pathname === "/") {
@@ -126,7 +117,7 @@ export default function Home() {
         />
       )}
 
-      {userModal && <UsersModals setUserModal={setUserModal} />}
+     
     </>
   );
 }

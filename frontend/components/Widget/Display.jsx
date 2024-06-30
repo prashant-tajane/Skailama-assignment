@@ -7,12 +7,10 @@ import Input from "../Input";
 import Dropdown from "../Dropdown";
 import { chatIconSizes, positionsOnScreen } from "../../constants";
 import { MdOutlineFileUpload } from "react-icons/md";
-import { uploadImage } from "../../utils/aws";
 import Image from "next/image";
 import Button from "../Button";
 import { useSnackbar } from "notistack";
 import { axiosInstance } from "../../utils/axiosInstance";
-
 const schema = z.object({
   primaryColor: z
     .string()

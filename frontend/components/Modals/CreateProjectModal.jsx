@@ -1,3 +1,5 @@
+// components/Modals/CreateProjectModal.jsx
+
 "use client";
 
 import React, { useEffect, useTransition } from "react";
@@ -34,19 +36,26 @@ const CreateProjectModal = ({
     }
   }, [createProject, setValue]);
 
-  const onSubmit = (values) => {
+  const onSubmit = async (values) => {
     startTransition(async () => {
       try {
         const { data } = await axiosInstance.post("/projects", values);
+
+        // Update state and show success message
         setProjects((prevProjects) => [data, ...prevProjects]);
         setCreateProject(false);
-        enqueueSnackbar("Project Created Successfully", {
-          variant: "success",
-        });
+
+        // Show success snackbar (if needed)
+        // enqueueSnackbar("Project Created Successfully", {
+        //   variant: "success",
+        // });
+
+        // Redirect to /projects route after successful project creation
+        window.location.href = "/projects";
       } catch (error) {
-        enqueueSnackbar(error?.response?.data.message, {
-          variant: "error",
-        });
+        console.error("Error occurred during project creation:", error);
+        // Optionally, log the error or handle it in another way
+        // Do not show any snackbar or message here
       }
     });
   };
@@ -54,14 +63,12 @@ const CreateProjectModal = ({
   const handleClose = () => {
     setCreateProject(false);
   };
+
   return (
     <div className={styles.modal}>
       <div className={styles.card}>
         <h3 className={styles.create_project_title}>Create Project</h3>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className={styles.create_project_form}
-        >
+        <form onSubmit={handleSubmit(onSubmit)} className={styles.create_project_form}>
           <div className={styles.form_control}>
             <label htmlFor="project_name">Enter Project Name: </label>
             <input
@@ -71,7 +78,7 @@ const CreateProjectModal = ({
               placeholder="Type here"
             />
             {errors.projectName?.message && (
-              <small>{errors.projectName?.message}</small>
+              <small>{errors.projectName.message}</small>
             )}
           </div>
 
