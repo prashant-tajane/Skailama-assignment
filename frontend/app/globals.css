@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --primary: #7e22ce;
+  --secondary: #460281;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.projects_layout {
+  display: flex;
+  height: 100vh;
+}
+
+.projects_layout_main {
+  width: calc(100%-350px);
+  margin-left: 350px;
+  flex: 1;
+  padding: 40px;
+  height: 100%;
+}
+
+.seprator {
+  height: 2px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 25px;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 968px) {
+  .projects_layout_main {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects_layout_main {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,139 @@
+.back_home_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3c3c3c;
+  gap: 4px;
+  border: 0.75px solid #999999;
+  background-color: white;
+  border-radius: 35px;
+  height: 40px;
+  max-width: 198px;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.create_project h1 {
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+}
+
+.create_project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2.8rem;
+}
+
+.create_project p {
+  color: #838383;
+  font-size: 20px;
+  text-align: center;
+}
+
+.myProjects {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block: 2.8rem;
+  gap: 1rem;
+}
+
+.myProjects h2 {
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+
+/* Projects */
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-block: 2.8rem;
+  margin-bottom: 5rem;
+}
+.project {
+  border: 1px solid #999999;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.project_image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary);
+  color: white;
+  font-weight: 700;
+  font-size: 42px;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100px;
+  height: 90px;
+}
+
+.project_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project_info .body h3 {
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.project_info .body p {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.project_info .timer {
+  color: #969696;
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
+@media (max-width: 968px) {
+    .projects {
+      grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+  .create_project h1 {
+    font-size: 32px;
+  }
+
+  .create_project p {
+    font-size: 16px;
+  }
+
+  .create_project img {
+    width: 100%;
+  }
+
+  .myProjects h2 {
+    font-size: 32px;
+  }
+
+}
+
+@media (max-width: 568px) {
+    .projects {
+        grid-template-columns: 1fr;
+      }
+}

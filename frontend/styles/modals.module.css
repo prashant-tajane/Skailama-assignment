@@ -1,0 +1,154 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: #ffffff40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.modal .card {
+  max-width: 550px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+
+/* Create Projects */
+
+.create_project_title {
+  font-size: 22px;
+}
+
+.create_project_form {
+  margin-block: 1.5rem;
+}
+
+.create_project_form .form_control input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #99999980;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.create_project_form .form_control input::placeholder {
+  color: #99999980;
+  font-weight: 600;
+}
+
+.create_project_form .form_control label {
+  font-size: 15px;
+  font-weight: 400;
+  color: #3d3c3c;
+}
+
+.create_project_form .form_control small {
+  font-size: 13px;
+  color: #fc0202;
+  padding-inline: 4px;
+}
+
+.create_project_form .actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.create_project_form .actions button:first-child {
+    color: red;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.create_project_form .actions button:last-child {
+    color: red;
+    background-color: var(--primary);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Users */
+.users {
+  margin-top: 1rem;
+}
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.user:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user p {
+  font-weight: 500;
+  font-size: 14px;
+  color: #3d3c3c;
+}
+
+.user:hover p {
+  color: white;
+}
+
+
+/* Upload */
+.card .topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card .topbar .topbar_data {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card .topbar button {
+  background-color: transparent;
+}
+
+.card .topbar .topbar_data p {
+  font-size: 22px;
+  color: #3C3C3C;
+  font-weight: 700;
+}
+
+.uploadFileForm {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .card .topbar .topbar_data p {
+    font-size: 18px;
+  }
+}

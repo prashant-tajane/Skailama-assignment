@@ -1,0 +1,73 @@
+.subscription_box {
+    margin-top: 1rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 8px;
+    padding: 22px 20px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.subscription_box p {
+    flex: 1;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.subscription_box p span {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.subscription_box button {
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.cancel_btn {
+    margin-top: 1rem;
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: warp;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.profile .form_input {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .profile form {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .subscription_box {
+        flex-direction: column;
+    }
+}
